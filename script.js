@@ -19,9 +19,8 @@ req.onerror = function() {
     console.log(this)
 }
 
-req.open('GET',"https://official-joke-api.appspot.com/random_joke")
-
 xml.addEventListener('click',() =>{
+    req.open('GET',"https://official-joke-api.appspot.com/random_joke")
     req.send();
 })
 
@@ -45,9 +44,9 @@ fetchWay.addEventListener('click',() => {
 
 //axios
 
-function thirdWay(api) {
+async function thirdWay(api) {
 
-    axios.get(api)
+    await axios.get(api)
     .then(res => {
         console.log("Resolved(Axios)",res.data)
         ouput.textContent = "Axios request is Success"
