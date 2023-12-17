@@ -16,3 +16,8 @@ button {
     width: 4.9rem;
     border-radius: 1.4rem;
 }
+
+button:hover{
+    background-color: black;
+    color: white;
+}
